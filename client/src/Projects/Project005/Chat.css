@@ -1,0 +1,17 @@
+.chat{
+    text-align:center;
+    position:fixed;
+    align-items:center;
+    display:flex;
+    font-size:48px;
+    font:bold;
+}
+a{
+    text-decoration:none;
+    text-align:center;
+}
+.link{
+    
+    margin-left:auto;
+    margin-right:auto;
+}

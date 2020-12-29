@@ -1,0 +1,23 @@
+ .subscribe__title2{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin:10px;
+  padding:10px;
+  text-align: center;
+ 
+
+ 
+}
+ .subscribe__title {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 10px;
+   padding: 10px;
+   text-align: center;
+
+
+
+ }
+

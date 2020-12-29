@@ -1,0 +1,223 @@
+import React from 'react';
+import Parse from 'parse';
+import './Dashboard.css';
+import MyAlert from '../../Utils/MyAlert';
+import Chatkit from  '@pusher/chatkit';
+import MessageList from '../../Component3/MessageList';
+import Loading from '../../Utils/Loading';
+import Card from "react-bootstrap/Card";
+import CardDeck from "react-bootstrap/CardDeck";
+//import Image from "react-bootstrap/Image";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import {Button,Form,Modal} from 'react-bootstrap'
+const Dashboard = (props) => {
+  const[number,setNumber] = React.useState(); 
+  const [error, setError] = React.useState(null);
+   const [loading, setLoading] = React.useState(false);
+   const tableName = "TotalInfo4";
+   const initialData = {
+     
+      
+      number:number,
+      
+      
+
+   };
+   const[data,setData]=React.useState({
+          results:[],
+            count:0
+     });
+    React.useEffect(()=>{
+           
+            const process=async()=>{
+ const lat= null;
+ const lng=null;
+ let userLocation= null;
+ if(lat && lng){
+userLocation = new Parse.GeoPoint({
+    latitude:lat,
+    longitude:lng,
+})
+ }
+const query = new Parse.Query('TotalInfo4');
+if(userLocation){
+query.withinMiles('location_geo',userLocation,10000,true)
+}else{
+    query.descending('createdAt');
+
+}
+
+
+query.withCount();
+const records = await query.find();
+await setData(records);
+            }
+            process();
+        },)
+        console.log('data is:',data)
+    
+   const handleSubmit = async (e) => {
+      try {
+         e.preventDefault();
+         e.persist();
+         await setLoading(true);
+         await setError(null);
+         const user = Parse.User.current();
+         const Post = Parse.Object.extend(tableName);
+         const post = new Post();
+         // write ACL code here
+         const acl = new Parse.ACL();
+         acl.setWriteAccess(user, true);
+         //private user read access
+     //acl.setReadAccess(user,true);
+         
+         acl.setPublicReadAccess(true);
+         post.setACL(acl);
+         //post users
+          post.set('number',number)
+            
+   
+         
+         post.set('user', user);
+         console.log('post is', post);
+         await post.save();
+         await setLoading(false);
+         props.history.push('/');
+      } catch (error) {
+         console.log('error is :', error);
+
+         await setLoading(false);
+         await setError(error.message);
+      }
+   };
+  
+   const handleChangeWithName =(e)=> {
+    console.log('onChange fired with value:', +e.target.value);
+    setNumber(()=>{
+       return (+e.target.value)
+    })
+  }
+const[show,setShow] = React.useState();
+   const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+            
+    var user = Parse.User.current();
+console.log('user is',user);
+    return (
+    
+        <div className="dashboard">
+           <Button  style={{marginTop:'20px'}} variant="primary" onClick={handleShow}>
+        Enter today wallet
+      </Button>
+
+      <Modal show={show} onHide={handleClose} animation={false}>
+        <Modal.Header closeButton>
+          <Modal.Title>Enter today amount</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Form >
+  <Form.Group controlId="formBasicNumber">
+    <Form.Label>Enter the current price</Form.Label>
+    <Form.Control type="number" placeholder="Enter Amount in #"  name="number" onChange= {handleChangeWithName}  value={number}/>
+ </Form.Group>
+ 
+               {error && <MyAlert   message={error}/>}
+               {loading && <Loading />}
+          
+ </Form>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary"  type="submit" onClick={handleSubmit}>
+           save change
+          </Button>
+        </Modal.Footer>
+      </Modal>
+     
+          
+ <div className="pt-3 pb-3" id="skills">
+      <h1 className="text-center font-details-b pb-4">Dashboard</h1>
+      <CardDeck>
+        <Row className="d-flex justify-content-around">
+            <Col>
+            <Card className="focus mt-2 mb-2">
+              <Card.Body>
+                <Card.Title className="text-center  card-title">Welcome</Card.Title>
+                <hr />
+                <Card.Text className="card-text d-flex justify-content-start flex-column">
+                  <span className="p-2">
+                    <div className="text-dark text-decoration-none" >
+                      {user && user.get('name')} 
+                    </div>
+                  </span>
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      </CardDeck>
+  
+      <CardDeck>
+        <Row className="d-flex justify-content-around">
+            <Col>
+            <Card className="focus mt-2 mb-2">
+              <Card.Body>
+                <Card.Title className="text-center  card-title">Your Wallet</Card.Title>
+                <hr />
+                <Card.Text className="card-text d-flex justify-content-start flex-column">
+                  <span className="p-2">
+                    <div className="text-dark text-decoration-none" >
+                     {data.results.map((item)=>{
+          
+          return (
+              <tr key={item.id}>
+     
+      
+      
+      <td style={{flexDirection:'center'}}>{item.get('number')}</td>
+      
+       
+     
+ 
+    </tr>
+  
+          );
+      })}
+ 
+                    </div>
+                  </span>
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      </CardDeck>
+      <CardDeck>
+        <Row className="d-flex justify-content-around">
+            <Col>
+            <Card className="focus mt-2 mb-2">
+              <Card.Body>
+                <Card.Title className="text-center  card-title">Total Earning</Card.Title>
+                <hr />
+                <Card.Text className="card-text d-flex justify-content-start flex-column">
+                  <span className="p-2">
+                    <div className="text-dark text-decoration-none" >
+                      100000
+                    </div>
+                  </span>
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      </CardDeck>
+    </div>
+<MessageList/>
+        </div>
+    )
+}
+
+export default Dashboard;
