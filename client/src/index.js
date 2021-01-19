@@ -3,18 +3,22 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Parse from 'parse';
 import App from './App';
+
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
+console.log('process.env.NODE_ENV:',process.env.NODE_ENV)
 Parse.initialize('myAppId');
-Parse.serverURL ="http://localhost:1339/parse";
+Parse.serverURL =process.env.NODE_ENV==='production'?'http://23.95.222.176:1339/parse':'http://localhost:1339/parse';
 
+
+//Here we create our store
+//A store holds the whole state tree of the application
 
 ReactDOM.render(
  
-    <App />
-,
+    <App />,
+
   document.getElementById('root')
 );
 

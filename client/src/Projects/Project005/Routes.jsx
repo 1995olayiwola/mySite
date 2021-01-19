@@ -9,10 +9,13 @@ import Location from '../../Widgets/LocationBox/Location';
 import Add4 from './Add4';
 import Add6 from './Add6';
 import BuyPosPaper from '../../Components/Auth/BuyPosPaper';
-import Chat from './Chat';
+
 const NotFound = React.lazy(()=> import('./NotFound'));
 const Home = React.lazy(()=> import('./Home'));
 const Subscribe = React.lazy(()=> import('./Subscribe'));
+const Bluetooth = React.lazy(()=> import('./Bluetooth'));
+const BluetoothFile = React.lazy(()=> import('./BluetoothFile'));
+const Success = React.lazy(()=> import('./Success'));
 
 const Add = React.lazy(()=> import('./Add'));
 const Add2 = React.lazy(()=> import('./Add2'));
@@ -31,7 +34,10 @@ const Logout = React.lazy(()=> import('../../Components/Auth/Logout'));
 const Repair = React.lazy(()=> import('../../Components/Auth/Repair'));
 const Pos = React.lazy(()=> import('../../Components/Auth/Pos'));
 const Register = React.lazy(()=> import('./Register'));
+const transaction = React.lazy(()=> import('../../transaction'));
+const Payhook = React.lazy(()=> import('./Payhook'));
 const Put = React.lazy(()=> import('./Put'));
+const Chat = React.lazy(()=> import('./Chat'));
  const Routes =() =>{
     
 
@@ -48,14 +54,19 @@ const Put = React.lazy(()=> import('./Put'));
 <Route component={Put} layout={ProjectLayout} path="/admin2" exact/>
 <Route component={Add} layout={ProjectLayout} path="/add" exact/>
 <Route component={Add2} layout={ProjectLayout} path="/add2" exact/>
+<Route component={transaction} layout={ProjectLayout} path="/transact" exact/>
 <Route component={Add3} layout={ProjectLayout} path="/add3" exact/>
 <Route component={Add4} layout={ProjectLayout} path="/add4" exact/>
 <Route component={Add5} layout={ProjectLayout} path="/add5" exact/>
 <Route component={Add6} layout={ProjectLayout} path="/add6" exact/>
 <Route component={Subscribe} layout={ProjectLayout} path="/subscribe" exact/>
 <Route component={Register} layout={ProjectLayout} path="/register" exact/>
-<Route component={Payment} layout={ProjectLayout} path="/payment" exact/>
 <Route component={Chat} layout={ProjectLayout} path="/chat" exact/>
+<Route component={Payhook} layout={ProjectLayout} path="/payment" exact/>
+<Route component={Bluetooth} layout={ProjectLayout} path="/bluetooth" exact/>
+<Route component={BluetoothFile} layout={ProjectLayout} path="/bluetoothpaper" exact/>
+<Route component={Success} layout={ProjectLayout} path="/sucessful" exact/>
+
 
 
             

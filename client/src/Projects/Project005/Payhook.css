@@ -1,0 +1,19 @@
+*{
+    background-color:gray;
+}
+
+
+.app{
+    height:50%;
+    text-align: center;
+    background-color: gray;
+
+}
+.app>h1{
+    margin: 5px;
+    padding:10px;
+   
+    
+    justify-content: center;
+    text-align: center;
+}

@@ -12,10 +12,10 @@ import SingleSelect from '../../Widgets/ReactSelect/SingleSelect';
 import DateTime from '../../Widgets/DateTime';
 
 
-function Add(Props) {
+function Register(Props) {
 const[number,setNumber]= React.useState(null);
 
-    const tableName = "TestingCheckbox";
+    const tableName = "PosTraining";
     const initialData = {
         startDate:new Date(),
         endDate:new Date(),
@@ -133,6 +133,25 @@ console.log('eror is :' ,eror);
                                                                                       
   ]}
   />
+  
+  <SingleSelect title="Nature of training"  handleChange={handleChange.bind(this,'categories')} options = {[
+    { value: 'Online', label: 'Online' },
+                    { value: 'Offline ', label: 'Offline' },
+                                                                                      
+  ]}
+  />
+  
+  <SingleSelect title="Numbers of years in the pos business"  handleChange={handleChange.bind(this,'categories')} options = {[
+    { value: '1', label: '1' },
+    { value: '2 ', label: '2' },
+    { value: '3 ', label: '3' },
+    { value: '4 ', label: '4' },
+    { value: '5 ', label: '5' },
+    { value: '5-10 ', label: '5-10' },
+    { value: 'others ', label: 'others' },
+                                                                                      
+  ]}
+  />
   <RichTextArea 
   handleDescription={handleChange.bind(this,'content')}
    value={formValues.content}
@@ -163,4 +182,4 @@ console.log('eror is :' ,eror);
     )
 }
 
-export default Add;
+export default Register;

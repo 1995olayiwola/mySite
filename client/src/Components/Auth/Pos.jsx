@@ -153,6 +153,12 @@ const[number2,setNumber2]= React.useState(null);
 <Form.Group controlId="formBasicNumber">
     <Form.Label className="label">Enter Phone number</Form.Label>
     <Form.Control type="number"className="input2" placeholder="Enter your phone number" onChange= {handleChangeWithName} value={number} />
+    <SingleSelect title="Gender"  handleChange={handleChange.bind(this,'categories')} options = {[
+    { value: 'Male', label: 'Male' },
+                    { value: 'Female ', label: 'Female' },
+                                                                                      
+  ]}
+  />
  </Form.Group>
   
  <Form.Group controlId="formBasicAddress">
@@ -167,12 +173,7 @@ const[number2,setNumber2]= React.useState(null);
  
   
 
-  <SingleSelect title="Gender"  handleChange={handleChange.bind(this,'categories')} options = {[
-    { value: 'Male', label: 'Male' },
-                    { value: 'Female ', label: 'Female' },
-                                                                                      
-  ]}
-  />
+  
   <RichTextArea 
   handleDescription={handleChange.bind(this,'content')}
    value={formValues.content}
@@ -181,9 +182,21 @@ const[number2,setNumber2]= React.useState(null);
    
    />
       <Form.Group controlId="formBasicNumber">
-    <Form.Label>Enter Average daily withdrawal amount</Form.Label>
+    <Form.Label> Average daily withdrawal amount</Form.Label>
     <Form.Control type="number" placeholder="Enter average daily withdrawer amount" onChange= {handleChangeWithName3} value={number2} />
- </Form.Group>  
+ </Form.Group> 
+   <Form.Group controlId="formBasicNumber">
+    <Form.Label> Average daily withdrawal count</Form.Label>
+    <Form.Control type="number" placeholder="Enter average daily withdrawer amount" onChange= {handleChangeWithName3} value={number2} />
+ </Form.Group> 
+   <Form.Group controlId="formBasicNumber">
+    <Form.Label> Average daily deposit amount</Form.Label>
+    <Form.Control type="number" placeholder="Enter average daily withdrawer amount" onChange= {handleChangeWithName3} value={number2} />
+ </Form.Group>
+   <Form.Group controlId="formBasicNumber">
+    <Form.Label> Average daily deposit count</Form.Label>
+    <Form.Control type="number" placeholder="Enter average daily withdrawer amount" onChange= {handleChangeWithName3} value={number2} />
+ </Form.Group>
  <Location 
               title="Enter your current address"
               value={(formValues.location && formValues.location.formatted_address)||''}

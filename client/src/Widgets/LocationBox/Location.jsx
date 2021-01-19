@@ -62,7 +62,7 @@ setO( obj.formatted_address)
     />
     {o && <button type="button" style={{fontSize:'24px',position:'absolute',right:'10px',top:'30px',border:'none',background:'transparent'}}
     onClick={()=>{
-       onHandleSelect=({});
+       onHandleSelect({});
        setO(null)
        locationRef.current.refs.input.value='';
        locationRef.current.refs.input.focus();

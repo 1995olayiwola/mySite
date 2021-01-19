@@ -22,25 +22,31 @@ const Header = () =>{
            <Link to="/">   <a className="nav-link text-light p-10" href="#">Home <span className="sr-only">(current)</span></a></Link>
             </li>
              <li className="nav-item">
-             <Link to="/subscribe"> <a className="nav-link text-light p-10" href="#">Create POS Account</a></Link>
+             <Link to="/subscribe"> <a className="nav-link text-light p-10" href="#"> POS Account Software</a></Link>
             </li>
             <li className="nav-item">
-            <Link to="/pos">  <a className="nav-link text-light p-10" href="#">Get POS</a></Link>
+            <Link to="/pos">  <a className="nav-link text-light p-10" href="#">Buy/Lease POS</a></Link>
             </li>
-                   <li className="nav-item">
+            <li className="nav-item">
              <Link to="/paper">   <a className="nav-link text-light p-10" href="#">Buy POS Paper</a></Link>
             </li>
-                  <li className="nav-item">
-            <Link to="/repair">   <a className="nav-link text-light p-10" href="#">Repair your POS</a></Link>
+                  
+            <li className="nav-item">
+            <Link to="/bluetooth">   <a className="nav-link text-light p-10" href="#">Buy Bluetooth Printer</a></Link>
             </li>
             
-             <li className="nav-item">
-             <Link to="/chat"> <a className="nav-link text-light p-10" href="#">Chat Support</a></Link>
+            <li className="nav-item">
+            <Link to="/repair">   <a className="nav-link text-light p-10" href="#">Repair POS terminal</a></Link>
             </li>
+            <li className="nav-item">
+            <Link to="/register">   <a className="nav-link text-light p-10" href="#">POS training</a></Link>
+            </li>
+                   
+           
             <li className="nav-item dropdown">
-             <Link></Link> <a className="nav-link text-light dropdown-toggle p-10" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {/*<a className="nav-link text-light dropdown-toggle p-10" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Service
-              </a>
+    </a>*/}
               <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <div className="dropdown-item"  >
                   <div className="list">

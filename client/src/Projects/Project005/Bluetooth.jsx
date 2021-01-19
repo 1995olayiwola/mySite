@@ -9,21 +9,19 @@ import {
 import Location from '../../Widgets/LocationBox/Location';
 //import {Select} from 'react-select';
 import RichTextArea from '../../Widgets/RichTextArea'
-import SingleSelect from '../../Widgets/ReactSelect/SingleSelect';
-
-function Repair(props) {
+//import SingleSelect from '../../Widgets/ReactSelect/SingleSelect';
+import './Bluetooth.css';
+function Bluetooth(props) {
 const[number,setNumber]= React.useState(null);
    
-   const tableName = "TotalInfo5";
+   const tableName = "Bluetooth";
    const initialData = {
       location: {},
       content: '',
-      categories: null,
+      
       number:number,
       username:"",
-      platform:"",
-      brand:"",
-      fault:""
+      
 
       
       
@@ -110,9 +108,7 @@ const[number,setNumber]= React.useState(null);
             post.set('content',formValues.content)
             post.set('number',number);
             post.set('username',formValues.username);
-            post.set('brand',formValues.brand);
-            post.set('fault',formValues.fault);
-            post.set('platform',formValues.platform);
+            
         
    
          post.set('categories', formValues.categories);
@@ -123,7 +119,7 @@ const[number,setNumber]= React.useState(null);
          console.log('post is', post);
          await post.save();
          await setLoading(false);
-         props.history.push('/add4');
+         props.history.push('/sucessful');
       } catch (eror) {
          console.log('eror is :', eror);
 
@@ -145,23 +141,10 @@ const[number,setNumber]= React.useState(null);
     <Form.Control type="number" placeholder="Enter your phone number" onChange= {handleChangeWithName} value={number} />
  </Form.Group>
   
- <Form.Group controlId="formBasicAddress">
- <Form.Label>Enter Pos brand</Form.Label>
-    <Form.Control type="text" placeholder="Enter Pos brand eg  AISINO,Android etc....." onChange= {handleChangeWithName2.bind(this,'brand')} value={formValues.value} name="brand"/>
- </Form.Group>
- <Form.Group controlId="formBasicAddress">
- <Form.Label>Enter fault</Form.Label>
-    <Form.Control type="text" placeholder="Enter your fault eg printer,button,screen etc...." onChange= {handleChangeWithName2.bind(this,'fault')} value={formValues.value} name="fault" />
-
- </Form.Group>
- <Form.Group controlId="formBasicNumber">
-    <Form.Label>No of faulty terminals</Form.Label>
-    <Form.Control type="number" placeholder="Enter your phone number" onChange= {handleChangeWithName} value={number} range="10"/>
- </Form.Group>
-  <Form.Group controlId="formBasicAddress">
- <Form.Label>Pos platform</Form.Label>
-    <Form.Control type="text" placeholder="Enter your current  eg  moniepoint,opay etc....." onChange= {handleChangeWithName2.bind(this,'platform')} value={formValues.value} name="platform" />
- </Form.Group>
+ 
+ 
+ 
+ 
 
   <RichTextArea 
   handleDescription={handleChange.bind(this,'content')}
@@ -193,4 +176,4 @@ const[number,setNumber]= React.useState(null);
      
    }
 
-   export default Repair;
+   export default Bluetooth;

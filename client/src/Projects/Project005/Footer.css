@@ -1,4 +1,8 @@
-
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 .footer-group {
   position: sticky;
   margin: 0;
@@ -12,6 +16,7 @@
     color: #fff;
     margin-bottom: 0px;
     margin-right: 0px;
+    position: sticky;
 
 }
 
