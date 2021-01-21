@@ -1,0 +1,1 @@
+{"message":"Invalid username/password.","code":101,"level":"error","stack":"Error: Invalid username/password.\n    at C:\\Users\\olayiwola abdur rahm\\Desktop\\project001\\teaching-master\\parseServer\\node_modules\\parse-server\\lib\\Routers\\UsersRouter.js:132:17","timestamp":"2020-10-26T19:56:57.465Z"}

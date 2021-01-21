@@ -1,0 +1,2 @@
+{"level":"info","message":"Parse LiveQuery Server starts running","timestamp":"2020-10-21T14:26:04.358Z"}
+{"functionName":"hello","params":{"score":1337,"playerName":"Sean Plott","cheatMode":false},"level":"info","message":"Ran cloud function hello for user undefined with:\n  Input: {\"score\":1337,\"playerName\":\"Sean Plott\",\"cheatMode\":false}\n  Result: 23","timestamp":"2020-10-21T14:26:45.954Z"}

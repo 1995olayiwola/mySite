@@ -1,0 +1,18 @@
+{"level":"info","message":"Parse LiveQuery Server starts running","timestamp":"2020-10-23T21:58:06.056Z"}
+{"level":"info","message":"Parse LiveQuery Server starts running","timestamp":"2020-10-23T21:59:59.277Z"}
+{"level":"info","message":"Parse LiveQuery Server starts running","timestamp":"2020-10-23T22:37:35.170Z"}
+{"level":"info","message":"Parse LiveQuery Server starts running","timestamp":"2020-10-23T23:25:03.184Z"}
+{"level":"info","message":"Parse LiveQuery Server starts running","timestamp":"2020-10-23T23:26:17.128Z"}
+{"level":"info","message":"Parse LiveQuery Server starts running","timestamp":"2020-10-23T23:30:56.389Z"}
+{"level":"info","message":"Parse LiveQuery Server starts running","timestamp":"2020-10-23T23:36:52.662Z"}
+{"level":"info","message":"Parse LiveQuery Server starts running","timestamp":"2020-10-23T23:46:05.610Z"}
+{"level":"info","message":"Parse LiveQuery Server starts running","timestamp":"2020-10-23T23:47:08.429Z"}
+{"level":"info","message":"Parse LiveQuery Server starts running","timestamp":"2020-10-23T23:52:43.407Z"}
+{"level":"info","message":"Parse LiveQuery Server starts running","timestamp":"2020-10-23T23:53:58.585Z"}
+{"level":"info","message":"Parse LiveQuery Server starts running","timestamp":"2020-10-24T00:07:47.391Z"}
+{"level":"info","message":"Parse LiveQuery Server starts running","timestamp":"2020-10-24T00:08:54.274Z"}
+{"level":"info","message":"Parse LiveQuery Server starts running","timestamp":"2020-10-24T00:10:00.771Z"}
+{"level":"info","message":"Parse LiveQuery Server starts running","timestamp":"2020-10-24T00:19:41.472Z"}
+{"functionName":"hello","params":{"score":1337,"playerName":"Sean Plott","cheatMode":false},"level":"info","message":"Ran cloud function hello for user undefined with:\n  Input: {\"score\":1337,\"playerName\":\"Sean Plott\",\"cheatMode\":false}\n  Result: 23","timestamp":"2020-10-24T00:22:59.521Z"}
+{"code":"EADDRINUSE","errno":"EADDRINUSE","syscall":"listen","address":"::","port":1337,"level":"error","timestamp":"2020-10-24T01:23:48.807Z"}
+{"level":"info","message":"Parse LiveQuery Server starts running","timestamp":"2020-10-24T01:35:44.206Z"}

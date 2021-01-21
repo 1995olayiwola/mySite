@@ -1,0 +1,5 @@
+{"level":"info","message":"Parse LiveQuery Server starts running","timestamp":"2020-12-28T08:40:52.606Z"}
+{"level":"info","message":"Parse LiveQuery Server starts running","timestamp":"2020-12-28T15:49:28.835Z"}
+{"code":"EADDRINUSE","errno":"EADDRINUSE","syscall":"listen","address":"::","port":1339,"level":"error","timestamp":"2020-12-28T15:52:39.494Z"}
+{"code":"EADDRINUSE","errno":"EADDRINUSE","syscall":"listen","address":"::","port":1339,"level":"error","timestamp":"2020-12-28T15:54:55.112Z"}
+{"level":"info","message":"Parse LiveQuery Server starts running","timestamp":"2020-12-28T16:19:13.835Z"}

@@ -1,0 +1,27 @@
+{"level":"info","message":"Parse LiveQuery Server starts running","timestamp":"2020-12-17T15:55:45.539Z"}
+{"code":"EADDRINUSE","errno":"EADDRINUSE","syscall":"listen","address":"::","port":1339,"level":"error","timestamp":"2020-12-17T17:29:49.587Z"}
+{"level":"info","message":"Parse LiveQuery Server starts running","timestamp":"2020-12-17T17:29:49.566Z"}
+{"level":"info","message":"Parse LiveQuery Server starts running","timestamp":"2020-12-17T17:32:15.791Z"}
+{"code":"EADDRINUSE","errno":"EADDRINUSE","syscall":"listen","address":"::","port":1339,"level":"error","timestamp":"2020-12-17T17:32:15.914Z"}
+{"level":"info","message":"Parse LiveQuery Server starts running","timestamp":"2020-12-17T17:32:50.202Z"}
+{"code":"EADDRINUSE","errno":"EADDRINUSE","syscall":"listen","address":"::","port":1339,"level":"error","timestamp":"2020-12-17T17:32:51.333Z"}
+{"level":"info","message":"Parse LiveQuery Server starts running","timestamp":"2020-12-17T17:37:00.969Z"}
+{"code":"EADDRINUSE","errno":"EADDRINUSE","syscall":"listen","address":"::","port":1339,"level":"error","timestamp":"2020-12-17T17:37:01.211Z"}
+{"level":"info","message":"Parse LiveQuery Server starts running","timestamp":"2020-12-17T17:40:22.839Z"}
+{"code":"EADDRINUSE","errno":"EADDRINUSE","syscall":"listen","address":"::","port":1339,"level":"error","timestamp":"2020-12-17T17:40:22.837Z"}
+{"level":"info","message":"Parse LiveQuery Server starts running","timestamp":"2020-12-17T17:40:56.745Z"}
+{"code":"EADDRINUSE","errno":"EADDRINUSE","syscall":"listen","address":"::","port":1339,"level":"error","timestamp":"2020-12-17T17:40:57.801Z"}
+{"level":"info","message":"Parse LiveQuery Server starts running","timestamp":"2020-12-17T17:41:37.793Z"}
+{"code":"EADDRINUSE","errno":"EADDRINUSE","syscall":"listen","address":"::","port":1339,"level":"error","timestamp":"2020-12-17T17:41:38.624Z"}
+{"level":"info","message":"Parse LiveQuery Server starts running","timestamp":"2020-12-17T17:42:32.018Z"}
+{"code":"EADDRINUSE","errno":"EADDRINUSE","syscall":"listen","address":"::","port":1339,"level":"error","timestamp":"2020-12-17T17:42:33.558Z"}
+{"level":"info","message":"Parse LiveQuery Server starts running","timestamp":"2020-12-17T18:43:46.399Z"}
+{"level":"info","message":"Parse LiveQuery Server starts running","timestamp":"2020-12-17T18:44:07.565Z"}
+{"level":"info","message":"Parse LiveQuery Server starts running","timestamp":"2020-12-17T18:46:41.998Z"}
+{"level":"info","message":"Parse LiveQuery Server starts running","timestamp":"2020-12-17T18:50:17.815Z"}
+{"level":"info","message":"Parse LiveQuery Server starts running","timestamp":"2020-12-17T23:38:51.330Z"}
+{"level":"info","message":"Parse LiveQuery Server starts running","timestamp":"2020-12-18T00:20:55.595Z"}
+{"level":"info","message":"Parse LiveQuery Server starts running","timestamp":"2020-12-18T00:31:05.557Z"}
+{"message":{"name":"MongoServerSelectionError","reason":{"type":"ReplicaSetNoPrimary","setName":"atlas-8pch0m-shard-0","maxSetVersion":1,"maxElectionId":"7fffffff0000000000000004","servers":{},"stale":false,"compatible":true,"compatibilityError":null,"logicalSessionTimeoutMinutes":null,"heartbeatFrequencyMS":10000,"localThresholdMS":15,"commonWireVersion":8}},"code":1,"level":"error","stack":"Error: MongoServerSelectionError: connection timed out\n    at C:\\Users\\olayiwola abdur rahm\\Desktop\\otunba2\\ParseServer2\\node_modules\\parse-server\\lib\\Controllers\\DatabaseController.js:1170:21\n    at async Object.getAuthForSessionToken (C:\\Users\\olayiwola abdur rahm\\Desktop\\otunba2\\ParseServer2\\node_modules\\parse-server\\lib\\Auth.js:106:16)","timestamp":"2020-12-18T01:58:49.665Z"}
+{"name":"MongoServerSelectionError","reason":{"type":"ReplicaSetNoPrimary","setName":"atlas-8pch0m-shard-0","maxSetVersion":1,"maxElectionId":"7fffffff0000000000000004","servers":{},"stale":false,"compatible":true,"compatibilityError":null,"logicalSessionTimeoutMinutes":null,"heartbeatFrequencyMS":10000,"localThresholdMS":15,"commonWireVersion":8},"level":"error","message":"error getting auth for sessionToken connection timed out","stack":"MongoServerSelectionError: connection timed out\n    at Timeout._onTimeout (C:\\Users\\olayiwola abdur rahm\\Desktop\\otunba2\\ParseServer2\\node_modules\\mongodb\\lib\\core\\sdam\\topology.js:438:30)\n    at listOnTimeout (internal/timers.js:554:17)\n    at processTimers (internal/timers.js:497:7)","timestamp":"2020-12-18T01:59:21.087Z"}
+{"name":"MongoServerSelectionError","reason":{"type":"ReplicaSetNoPrimary","setName":"atlas-8pch0m-shard-0","maxSetVersion":1,"maxElectionId":"7fffffff0000000000000004","servers":{},"stale":false,"compatible":true,"compatibilityError":null,"logicalSessionTimeoutMinutes":null,"heartbeatFrequencyMS":10000,"localThresholdMS":15,"commonWireVersion":8},"level":"error","message":"error getting auth for sessionToken connection timed out","stack":"MongoServerSelectionError: connection timed out\n    at Timeout._onTimeout (C:\\Users\\olayiwola abdur rahm\\Desktop\\otunba2\\ParseServer2\\node_modules\\mongodb\\lib\\core\\sdam\\topology.js:438:30)\n    at listOnTimeout (internal/timers.js:554:17)\n    at processTimers (internal/timers.js:497:7)","timestamp":"2020-12-18T02:01:20.983Z"}
