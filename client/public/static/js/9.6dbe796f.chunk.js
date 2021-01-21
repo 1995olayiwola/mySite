@@ -1,0 +1,2 @@
+(this.webpackJsonpclient2=this.webpackJsonpclient2||[]).push([[9],{1011:function(t,c,n){},1032:function(t,c,n){"use strict";n.r(c);var s=n(1);n(0),n(1011);c.default=function(){return Object(s.jsx)("div",{className:"chat"})}}}]);
+//# sourceMappingURL=9.6dbe796f.chunk.js.map
