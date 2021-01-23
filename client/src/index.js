@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 console.log('process.env.NODE_ENV:',process.env.NODE_ENV)
 Parse.initialize('myAppId');
-Parse.serverURL =process.env.NODE_ENV==='production'?'http://23.95.222.176/parse':'http://localhost:80/parse';
+Parse.serverURL =process.env.NODE_ENV==='production'?'http://23.95.222.176:1338/parse':'http://localhost:1338/parse';
 
 
 //Here we create our store

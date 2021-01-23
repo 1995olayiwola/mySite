@@ -11,7 +11,7 @@ var app = express();
 
 //var databaseUri = "mongodb+srv://abdulrafiu__otunba__ventures:abdulrafiu__otunba__ventures@cluster0.vtonl.mongodb.net/project?retryWrites=true&w=majority";
 var databaseUri = "mongodb+srv://otunba_alani:otunba_alani@cluster0.jpcli.mongodb.net/project?retryWrites=true&w=majority";
-var server_url = process.env.NODE_ENV === 'production' ? 'http://23.95.222.176/parse' : 'http://localhost:80/parse';
+var server_url = process.env.NODE_ENV === 'production' ? 'http://23.95.222.176:1338/parse' : 'http://localhost:1338/parse';
 
 var api = new ParseServer({
   databaseURI: databaseUri,
@@ -80,7 +80,7 @@ if (process.env.NODE_ENV === 'production') {
   })
 }
 
-var port = 80;
+var port = 1338;
 var httpServer = require('http').createServer(app);
 httpServer.listen(port, () => {
   console.log('parse server is running on port ' + port);
